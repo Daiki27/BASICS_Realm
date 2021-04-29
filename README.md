@@ -11,7 +11,7 @@
     * B . [こちらの記事](https://qiita.com/i_nak/items/5d6062333b205275b85b)を参考にRealmファイルを探す.  
     * C . 見つけたRealmファイルをRealmStudioで開く.  
 
-* メモ書き(シュミレーターの場合)
+* メモ書き(シュミレーターの場合)  
 まず, 以下のコードをプロジェクトに記載して実行.
 ```
 print(Realm.Configuration.defaultConfiguration.fileURL!)
