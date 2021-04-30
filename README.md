@@ -38,8 +38,8 @@ cd /Users/・・・/・・・/ or Finder>移動>/Users/・・・/・・・/>
 try! realm.write {
   realm.deleteAll()
 }
+
 //Realmに保存されているAnimalクラスのオブジェクトの削除.
-let realm = try! Realm()
 let dogObject = realm.objects(Animal.self).filter("name=='Dog'")
 try! realm.write {
  realm.delete(dogObject)
