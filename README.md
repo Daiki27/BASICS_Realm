@@ -32,7 +32,7 @@ cd /Users/・・・/・・・/ or Finder>移動>/Users/・・・/・・・/>
 
 ### Realm Documentation | [Realm Official](https://docs.mongodb.com/realm-legacy/jp/docs/swift/latest.html)  
 
-* オブジェクトの消去
+* オブジェクトの消去  
 クエリ(データベースからデータを抽出したり操作したりといった処理を行うための命令)の扱いが重要になる.
 ```
 //Realmに保存されている全オブジェクトの削除.
