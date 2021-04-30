@@ -29,3 +29,14 @@ file:///Users/・・・/・・・/default.realm
 cd /Users/・・・/・・・/ or Finder>移動>/Users/・・・/・・・/>
 ```
 そして, default.realmをRealm Studioで開くことでDBをRealmの中身を見ることができる.
+
+### Realm Documentation 
+Ref, [Realm Official](https://docs.mongodb.com/realm-legacy/jp/docs/swift/latest.html)  
+
+* オブジェクトの消去
+```
+//Realmに保存されている全オブジェクトの削除.
+try! realm.write {
+  realm.deleteAll()
+}
+```
