@@ -1,6 +1,6 @@
 # BASICS_Realm
 
-# RealmSwiftに保存されたデータの可視化
+### RealmSwiftに保存されたデータの可視化
 
 1 . Realm Browser：AppleStoreからインストール  
 * ファイルを開こうとすると「please enter a valid encryption key for this realm file」と表示され開けない.
