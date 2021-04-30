@@ -30,13 +30,18 @@ cd /Users/・・・/・・・/ or Finder>移動>/Users/・・・/・・・/>
 ```
 そして, default.realmをRealm Studioで開くことでDBをRealmの中身を見ることができる.
 
-### Realm Documentation 
-Ref, [Realm Official](https://docs.mongodb.com/realm-legacy/jp/docs/swift/latest.html)  
+### Realm Documentation | [Realm Official](https://docs.mongodb.com/realm-legacy/jp/docs/swift/latest.html)  
 
 * オブジェクトの消去
 ```
 //Realmに保存されている全オブジェクトの削除.
 try! realm.write {
   realm.deleteAll()
+}
+//Realmに保存されているAnimalクラスのオブジェクトの削除.
+let realm = try! Realm()
+let dogObject = realm.objects(Animal.self).filter("name=='Dog'")
+try! realm.write {
+ realm.delete(dogObject)
 }
 ```
