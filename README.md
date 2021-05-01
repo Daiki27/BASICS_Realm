@@ -53,8 +53,8 @@ try! realm.write {
 
 例えば, 以下のコードの実行結果を見ると, Results<Animal>となっていると確認できる.
 ```
-let animal = realm.objects(Animal.self)
-print(animal)
+let objects = realm.objects(Animal.self)
+print(object)
 //実行結果.
 Results<Animal> <0x7fbb22c08ee0> (
 [0] Animal {
@@ -66,10 +66,15 @@ Results<Animal> <0x7fbb22c08ee0> (
 [2] Animal {
    name = Bird;
 })
+
+print(type(of: object))
+//実行結果.
+Results<Animal>
 ```
 コレクションクラスResultsは以下のように宣言する.
 ```
 var animalItem: Results<Animal>!
 //使えるメンバは以下のとおり.
 animalItem.count // 件数を返す.
+animalItem[0]    // 1行目のコンテンツを返す.
 ```
