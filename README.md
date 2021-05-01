@@ -1,7 +1,7 @@
 # BASICS_Realm
 
 ### RealmSwiftに保存されたデータの可視化
-
+***
 1 . Realm Browser：AppleStoreからインストール  
 * ファイルを開こうとすると「please enter a valid encryption key for this realm file」と表示され開けない.
 
@@ -31,8 +31,8 @@ cd /Users/・・・/・・・/ or Finder>移動>/Users/・・・/・・・/>
 そして, default.realmをRealm Studioで開くことでDBをRealmの中身を見ることができる.
 
 ### Realm Documentation | [Realm Official](https://docs.mongodb.com/realm-legacy/jp/docs/swift/latest.html)  
-
-* オブジェクトの消去  
+***
+* ①オブジェクトの消去  
 クエリ(データベースからデータを抽出したり操作したりといった処理を行うための命令)の扱いが重要になる.
 ```
 //Realmに保存されている全オブジェクトの削除.
@@ -46,3 +46,25 @@ try! realm.write {
  realm.delete(dogObject)
 }
 ```
+
+* ②コレクションクラス：Results
+> RealmにはRealmオブジェクトの集合を扱うためのクラスが複数あります。それらを総称して”Realmコレクションクラス”と呼びます。
+> Results、クエリを用いて取得したオブジェクトを表します。  
+
+例えば, 以下のコードの実行結果を見ると, Results<Animal>となっていると確認できる.
+```
+let animal = realm.objects(Animal.self)
+print(animal)
+//実行結果.
+Results<Animal> <0x7fbb22c08ee0> (
+[0] Animal {
+   name = Cat;
+},
+[1] Animal {
+   name = Dog;
+},
+[2] Animal {
+   name = Bird;
+})
+```
+
