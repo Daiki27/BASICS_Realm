@@ -67,4 +67,9 @@ Results<Animal> <0x7fbb22c08ee0> (
    name = Bird;
 })
 ```
-
+コレクションクラスResultsは以下のように宣言する.
+```
+var animalItem: Results<Animal>!
+//使えるメンバは以下のとおり.
+animalItem.count // 件数を返す.
+```
